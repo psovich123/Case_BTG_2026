@@ -1,0 +1,120 @@
+{
+  "documento": "03_siderurgica_paranaense_proventos.pdf",
+  "metodo_extracao": "texto_nativo",
+  "emissor": {
+    "valor": "Companhia Siderúrgica Paranaense S.A.",
+    "confianca": "alta",
+    "fonte": "COMPANHIA SIDERÚRGICA PARANAENSE S.A.",
+    "justificativa": "Informado diretamente no cabeçalho do documento"
+  },
+  "cnpj": {
+    "valor": "76.543.210/0001-12",
+    "confianca": "alta",
+    "fonte": "CNPJ/ME nº 76.543.210/0001-12",
+    "justificativa": "Informado diretamente no cabeçalho do documento"
+  },
+  "isin": {
+    "valor": "BRCSPRACNOR1",
+    "confianca": "alta",
+    "fonte": "Código de negociação CSPR3 (ISIN BRCSPRACNOR1)",
+    "justificativa": "Informado diretamente no documento"
+  },
+  "ticker": {
+    "valor": "CSPR3",
+    "confianca": "alta",
+    "fonte": "Código de negociação CSPR3",
+    "justificativa": "Informado diretamente no documento"
+  },
+  "classe": {
+    "valor": "ON",
+    "confianca": "alta",
+    "fonte": "Valor bruto por ação ON",
+    "justificativa": "Confirmado pelo Golden Record - classe ON"
+  },
+  "tipo_evento": {
+    "valor": "JCP",
+    "confianca": "media",
+    "fonte": "Natureza do provento (conforme Remuneração do capital próprio corpo do aviso)",
+    "justificativa": "A substância indica JCP (retenção de IRRF 17,5%, imputado ao dividendo mínimo obrigatório, cálculo sobre patrimônio líquido), mas o título diz 'Distribuição de Dividendos'. Reduzi confiança devido ao conflito entre título e substância."
+  },
+  "data_aprovacao": {
+    "valor": "05/06/2026",
+    "confianca": "alta",
+    "fonte": "reunião de 05 de junho de 2026",
+    "justificativa": "Informado diretamente no documento"
+  },
+  "data_com": {
+    "valor": "19/06/2026",
+    "confianca": "alta",
+    "fonte": "Data-base ('data com') 19/06/2026",
+    "justificativa": "Informado diretamente no documento"
+  },
+  "data_ex": {
+    "valor": "22/06/2026",
+    "confianca": "alta",
+    "fonte": "Data 'ex' 22/06/2026",
+    "justificativa": "Informado diretamente no documento"
+  },
+  "data_pagamento": {
+    "valor": "11/09/2026",
+    "confianca": "alta",
+    "fonte": "Data de pagamento 11/09/2026",
+    "justificativa": "Informado diretamente no documento"
+  },
+  "valor_bruto_por_acao": {
+    "valor": "0,0921500000",
+    "confianca": "alta",
+    "fonte": "Valor bruto por ação ON R$ 0,0921500000",
+    "justificativa": "Informado diretamente no documento"
+  },
+  "valor_liquido_por_acao": {
+    "valor": "0,0760237500",
+    "confianca": "alta",
+    "fonte": "Valor líquido por ação ON R$ 0,0760237500",
+    "justificativa": "Informado diretamente no documento"
+  },
+  "aliquota_irrf": {
+    "valor": "17,5",
+    "confianca": "alta",
+    "fonte": "Imposto de Renda Retido na 17,5%",
+    "justificativa": "Informado diretamente no documento"
+  },
+  "proporcao": {
+    "valor": null,
+    "confianca": "baixa",
+    "fonte": null,
+    "justificativa": "Não se aplica para eventos de JCP/dividendos - apenas para bonificações/grupamentos/desdobramentos"
+  },
+  "custo_atribuido_fiscal": {
+    "valor": null,
+    "confianca": "baixa",
+    "fonte": null,
+    "justificativa": "Não se aplica para eventos de JCP/dividendos - apenas para bonificações"
+  },
+  "moeda": {
+    "valor": null,
+    "confianca": "baixa",
+    "fonte": null,
+    "justificativa": "Não foi explicitada no texto, inferido como BRL baseado no contexto"
+  },
+  "validacoes": [
+    {
+      "regra": "Golden Record - Verificação de emissor/CNPJ/ISIN/Ticker/Classe",
+      "status": "ok",
+      "detalhe": "Registro encontrado: Companhia Siderúrgica Paranaense S.A., CNPJ 76.543.210/0001-12, ISIN BRCSPRACNOR1, Ticker CSPR3, Classe ON"
+    },
+    {
+      "regra": "Coerência de datas",
+      "status": "ok",
+      "detalhe": "Ordem cronológica verificada: data_aprovacao (05/06/2026) < data_com (19/06/2026) < data_ex (22/06/2026) < data_pagamento (11/09/2026)"
+    },
+    {
+      "regra": "Coerência de valores financeiros",
+      "status": "ok",
+      "detalhe": "Valor líquido calculado corretamente: 0,09215 * (1 - 0,175) = 0,07602375, igual ao informado"
+    }
+  ],
+  "confianca_geral": "media",
+  "requer_revisao_humana": false,
+  "motivos_revisao": []
+}

@@ -1,0 +1,18 @@
+# Qual provider usar: anthropic (default), openai ou ollama (local)
+LLM_PROVIDER=ollama
+
+# Opcional: sobrescreve o modelo default do provider escolhido
+# LLM_MODEL=claude-sonnet-4-6
+# LLM_MODEL=gpt-4.1
+# LLM_MODEL=llama3.1
+# LLM_MODEL=Qwen3.5
+
+# Defina a chave do provider escolhido (não necessário para ollama)
+# ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxxxxx
+# OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx
+
+# Opcional, só para ollama - default: http://localhost:11434/v1
+OLLAMA_BASE_URL=http://127.0.0.1:8080/v1
+LLM_MODEL=local-model
+
+TESSERACT_CMD=C:\\Program Files\\Tesseract-OCR\\tesseract.exe

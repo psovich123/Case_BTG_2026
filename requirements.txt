@@ -1,0 +1,12 @@
+# Núcleo do pipeline (sempre necessário)
+pydantic>=2.0
+pdfplumber>=0.11
+pdf2image>=1.17
+pytesseract>=0.3.13
+pandas>=2.0
+python-dotenv
+pymupdf>=1.27.2.3
+
+# SDKs de provider de LLM - instale apenas o que for usar via LLM_PROVIDER
+anthropic>=0.40.0   # LLM_PROVIDER=anthropic (default)
+openai>=1.50.0      # LLM_PROVIDER=openai

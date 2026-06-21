@@ -1,0 +1,122 @@
+{
+  "documento": "01_energetica_vale_tiete_dividendo.pdf",
+  "metodo_extracao": "texto_nativo",
+  "emissor": {
+    "valor": "Energética Vale do Tietê S.A.",
+    "confianca": "alta",
+    "fonte": "Documento (título) e golden_record lookup",
+    "justificativa": "Dados confirmados na base de referência golden_records.csv"
+  },
+  "cnpj": {
+    "valor": "12.345.678/0001-90",
+    "confianca": "alta",
+    "fonte": "Documento e golden_record lookup",
+    "justificativa": "Dados confirmados na base de referência golden_records.csv"
+  },
+  "isin": {
+    "valor": "BRTIETACNOR3",
+    "confianca": "alta",
+    "fonte": "Documento e golden_record lookup",
+    "justificativa": "Dados confirmados na base de referência golden_records.csv"
+  },
+  "ticker": {
+    "valor": "TIET3",
+    "confianca": "alta",
+    "fonte": "Documento e golden_record lookup",
+    "justificativa": "Dados confirmados na base de referência golden_records.csv"
+  },
+  "classe": {
+    "valor": "ON",
+    "confianca": "alta",
+    "fonte": "Documento",
+    "justificativa": "Ações da Companhia são ordinárias, conforme mencionado no texto"
+  },
+  "tipo_evento": {
+    "valor": "Dividendo",
+    "confianca": "alta",
+    "fonte": "Documento (AVISO AOS ACIONISTAS — Pagamento de Dividendos) e tipo explicitamente indicado",
+    "justificativa": "Documento claramente descreve distribuição de dividendos sem retenção de IRRF padrão, apenas IRRF sobre parcela excedente"
+  },
+  "data_aprovacao": {
+    "valor": "28/05/2026",
+    "confianca": "alta",
+    "fonte": "Documento",
+    "justificativa": "Conselho de Administração aprovou em 28 de maio de 2026"
+  },
+  "data_com": {
+    "valor": "12/06/2026",
+    "confianca": "alta",
+    "fonte": "Documento",
+    "justificativa": "Data-base para posicionamento acionário"
+  },
+  "data_ex": {
+    "valor": "15/06/2026",
+    "confianca": "alta",
+    "fonte": "Documento",
+    "justificativa": "Ações negociadas ex-dividendos a partir de 15 de junho de 2026"
+  },
+  "data_pagamento": {
+    "valor": "03/07/2026",
+    "confianca": "alta",
+    "fonte": "Documento",
+    "justificativa": "Data de pagamento dos dividendos"
+  },
+  "valor_bruto_por_acao": {
+    "valor": "0,4275",
+    "confianca": "alta",
+    "fonte": "Documento",
+    "justificativa": "Valor bruto por ação ordinária de R$ 0,4275"
+  },
+  "valor_liquido_por_acao": {
+    "valor": "0,36585",
+    "confianca": "media",
+    "fonte": "Documento",
+    "justificativa": "Verificação de coerência mostrou inconsistência: valor líquido esperado com alíquota de 10% sobre 0,4275 seria 0,38475, mas documento informa 0,36585"
+  },
+  "aliquota_irrf": {
+    "valor": "10",
+    "confianca": "alta",
+    "fonte": "Documento",
+    "justificativa": "Alíquota de 10% sobre parcela que excede R$ 50.000,00 mensais"
+  },
+  "proporcao": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não aplicável - é evento de dividendos, não bonificação ou grupamento"
+  },
+  "custo_atribuido_fiscal": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não aplicável - não é bonificação"
+  },
+  "moeda": {
+    "valor": "BRL",
+    "confianca": "alta",
+    "fonte": "Documento (R$)",
+    "justificativa": "Moeda brasileira"
+  },
+  "validacoes": [
+    {
+      "regra": "lookup_golden_record",
+      "status": "ok",
+      "detalhe": "Energética Vale do Tietê S.A. encontrada com CNPJ 12.345.678/0001-90, ISIN BRTIETACNOR3, ticker TIET3, classe ON, segmento Novo Mercado, status ativo"
+    },
+    {
+      "regra": "check_date_coherence",
+      "status": "ok",
+      "detalhe": "Ordem cronológica válida: data_aprovacao (28/05/2026) < data_com (12/06/2026) < data_ex (15/06/2026) < data_pagamento (03/07/2026)"
+    },
+    {
+      "regra": "check_value_coherence",
+      "status": "falha",
+      "detalhe": "Inconsistência detectada: valor bruto (0,4275) com alíquota de 10% deveria resultar em valor líquido de 0,38475, mas documento informa 0,36585. Diferença de 0,0189. Campo valor_liquido_por_acao recebe valor do documento mas com confiança reduzida para indicar inconsistência."
+    }
+  ],
+  "confianca_geral": "baixa",
+  "requer_revisao_humana": true,
+  "motivos_revisao": [
+    "Validação reprovada: check_value_coherence - Inconsistência detectada: valor bruto (0,4275) com alíquota de 10% deveria resultar em valor líquido de 0,38475, mas documento informa 0,36585. Diferença de 0,0189. Campo valor_liquido_por_acao recebe valor do documento mas com confiança reduzida para indicar inconsistência."
+  ]
+}

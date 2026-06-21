@@ -1,0 +1,120 @@
+{
+  "documento": "08_construtora_horizonte_bonificacao.pdf",
+  "metodo_extracao": "texto_nativo",
+  "emissor": {
+    "valor": "Construtora Horizonte S.A.",
+    "confianca": "alta",
+    "fonte": "Construtora Horizonte S.A.",
+    "justificativa": "Mencionado como emissor no título do documento"
+  },
+  "cnpj": {
+    "valor": "09.888.999/0001-21",
+    "confianca": "alta",
+    "fonte": "CNPJ/ME nº 09.888.999/0001-21",
+    "justificativa": "Explicitamente mencionado no texto"
+  },
+  "isin": {
+    "valor": "BRCNHZACNOR5",
+    "confianca": "alta",
+    "fonte": "Código de negociação CNHZ3 (ISIN BRCNHZACNOR5)",
+    "justificativa": "Explicitamente mencionado no texto"
+  },
+  "ticker": {
+    "valor": "CNHZ3",
+    "confianca": "alta",
+    "fonte": "Código de negociação CNHZ3",
+    "justificativa": "Explicitamente mencionado no texto"
+  },
+  "classe": {
+    "valor": null,
+    "confianca": "media",
+    "fonte": null,
+    "justificativa": "Classe não especificada no documento"
+  },
+  "tipo_evento": {
+    "valor": "Bonificação em ações",
+    "confianca": "alta",
+    "fonte": "AVISO AOS ACIONISTAS — Bonificação em Ações",
+    "justificativa": "Título do documento e conteúdo confirmam"
+  },
+  "data_aprovacao": {
+    "valor": "04/06/2026",
+    "confianca": "alta",
+    "fonte": "Assembleia Geral Extraordinária de 04 de junho de 2026",
+    "justificativa": "Explicitamente mencionado como data da aprovação"
+  },
+  "data_com": {
+    "valor": "18/06/2026",
+    "confianca": "alta",
+    "fonte": "ao final do dia 18 de junho de 2026 (\"data com\")",
+    "justificativa": "Explicitamente mencionado como data com"
+  },
+  "data_ex": {
+    "valor": "19/06/2026",
+    "confianca": "alta",
+    "fonte": "a partir de 19 de junho de 2026",
+    "justificativa": "Explicitamente mencionado como data ex-bonificação"
+  },
+  "data_pagamento": {
+    "valor": "26/06/2026",
+    "confianca": "alta",
+    "fonte": "Crédito das ações bonificadas 26/06/2026",
+    "justificativa": "Explicitamente mencionado como data de crédito"
+  },
+  "valor_bruto_por_acao": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não se aplica a bonificação - evento sem valor monetário para acionistas"
+  },
+  "valor_liquido_por_acao": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não se aplica a bonificação - evento sem valor monetário para acionistas"
+  },
+  "aliquota_irrf": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não se aplica a bonificação - não há retenção de IRRF"
+  },
+  "proporcao": {
+    "valor": "1:20",
+    "confianca": "alta",
+    "fonte": "na proporção de 1 (uma) ação nova para cada 20 (vinte) ações",
+    "justificativa": "Explicitamente mencionado como proporção"
+  },
+  "custo_atribuido_fiscal": {
+    "valor": "7.820000",
+    "confianca": "alta",
+    "fonte": "O custo unitário atribuído às ações bonificadas, para fins fiscais, é de R$ 7,820000 por ação",
+    "justificativa": "Explicitamente mencionado como custo atribuído fiscal"
+  },
+  "moeda": {
+    "valor": "BRL",
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Moeda implicita BRL (Real Brasileiro) conforme padrão de documento brasileiro"
+  },
+  "validacoes": [
+    {
+      "regra": "lookup_golden_record",
+      "status": "nao_aplicavel",
+      "detalhe": "Nenhum registro correspondente encontrado - as informações extraídas não estão na base de referência golden_records.csv"
+    },
+    {
+      "regra": "check_date_coherence",
+      "status": "ok",
+      "detalhe": "Ordem cronológica das datas válida: aprovação (04/06/2026) < data com (18/06/2026) < data ex (19/06/2026) < data pagamento (26/06/2026)"
+    },
+    {
+      "regra": "check_value_coherence",
+      "status": "nao_aplicavel",
+      "detalhe": "Não se aplica - evento de bonificação não possui valores bruto/liquido por ação para acionistas"
+    }
+  ],
+  "confianca_geral": "alta",
+  "requer_revisao_humana": false,
+  "motivos_revisao": []
+}

@@ -1,0 +1,120 @@
+{
+  "documento": "04_rede_varejo_jcp_sem_data.pdf",
+  "metodo_extracao": "texto_nativo",
+  "emissor": {
+    "valor": "REDE VAREJO BRASIL S.A.",
+    "confianca": "alta",
+    "fonte": "REDE VAREJO BRASIL S.A.",
+    "justificativa": "Extraído do cabeçalho do documento"
+  },
+  "cnpj": {
+    "valor": "08.777.666/0001-33",
+    "confianca": "alta",
+    "fonte": "CNPJ/ME nº 08.777.666/0001-33",
+    "justificativa": "Extraído do cabeçalho do documento"
+  },
+  "isin": {
+    "valor": "BRRVBRACNOR9",
+    "confianca": "alta",
+    "fonte": "Código de negociação RVBR3 (ISIN BRRVBRACNOR9)",
+    "justificativa": "Confirmado via golden record lookup"
+  },
+  "ticker": {
+    "valor": "RVBR3",
+    "confianca": "alta",
+    "fonte": "Código de negociação RVBR3 (ISIN BRRVBRACNOR9)",
+    "justificativa": "Confirmado via golden record lookup"
+  },
+  "classe": {
+    "valor": "ON",
+    "confianca": "alta",
+    "fonte": "Valor bruto por ação ON R$ 0,2050000000",
+    "justificativa": "Extraído do documento"
+  },
+  "tipo_evento": {
+    "valor": "JCP",
+    "confianca": "alta",
+    "fonte": "AVISO AOS ACIONISTAS — Juros sobre o Capital Próprio",
+    "justificativa": "Documento explicitamente trata-se de Juros sobre o Capital Próprio com retenção de IRRF 17,5% sobre valor bruto"
+  },
+  "data_aprovacao": {
+    "valor": "09/06/2026",
+    "confianca": "alta",
+    "fonte": "09 de junho de 2026",
+    "justificativa": "Data da reunião do Conselho de Administração"
+  },
+  "data_com": {
+    "valor": "23/06/2026",
+    "confianca": "alta",
+    "fonte": "23 de junho de 2026",
+    "justificativa": "Data-base para o data com"
+  },
+  "data_ex": {
+    "valor": "24/06/2026",
+    "confianca": "alta",
+    "fonte": "24 de junho de 2026",
+    "justificativa": "Data ex-JCP"
+  },
+  "data_pagamento": {
+    "valor": "A definir",
+    "confianca": "media",
+    "fonte": "A definir (vide aviso complementar)",
+    "justificativa": "A data foi indicada como a definir e a ser divulgada em aviso complementar"
+  },
+  "valor_bruto_por_acao": {
+    "valor": "0,2050",
+    "confianca": "alta",
+    "fonte": "Valor bruto por ação ON R$ 0,2050000000",
+    "justificativa": "Extraído do documento"
+  },
+  "valor_liquido_por_acao": {
+    "valor": "0,169125",
+    "confianca": "alta",
+    "fonte": "Valor líquido por ação ON R$ 0,1691250000",
+    "justificativa": "Extraído do documento"
+  },
+  "aliquota_irrf": {
+    "valor": "17,5",
+    "confianca": "alta",
+    "fonte": "IRRF na fonte 17,5%",
+    "justificativa": "Extraído do documento"
+  },
+  "proporcao": {
+    "valor": null,
+    "confianca": "baixa",
+    "fonte": null,
+    "justificativa": "Não se aplica para evento JCP - não é bonificação nem grupamento"
+  },
+  "custo_atribuido_fiscal": {
+    "valor": null,
+    "confianca": "baixa",
+    "fonte": null,
+    "justificativa": "Não se aplica para evento JCP"
+  },
+  "moeda": {
+    "valor": "BRL",
+    "confianca": "alta",
+    "fonte": "R$",
+    "justificativa": "Valores expressos em reais"
+  },
+  "validacoes": [
+    {
+      "regra": "golden_record_lookup",
+      "status": "ok",
+      "detalhe": "CNPJ 08.777.666/0001-33 encontrado com ISIN BRRVBRACNOR9, ticker RVBR3, classe ON, emissor Rede Varejo Brasil S.A."
+    },
+    {
+      "regra": "check_date_coherence",
+      "status": "ok",
+      "detalhe": "Datas coerentes: aprovação (09/06/2026) < data_com (23/06/2026) < data_ex (24/06/2026). data_pagamento ausente conforme esperado."
+    },
+    {
+      "regra": "check_value_coherence",
+      "status": "ok",
+      "detalhe": "Valores coerentes: valor bruto 0,2050 * (1 - 17,5%) = 0,169125 (valor líquido informado). Diferença: 0,0."
+    }
+  ],
+  "confianca_geral": "alta",
+  "requer_revisao_humana": false,
+  "motivos_revisao": []
+}

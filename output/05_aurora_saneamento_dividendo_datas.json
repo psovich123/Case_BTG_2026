@@ -1,0 +1,122 @@
+{
+  "documento": "05_aurora_saneamento_dividendo_datas.pdf",
+  "metodo_extracao": "texto_nativo",
+  "emissor": {
+    "valor": "Aurora Saneamento S.A.",
+    "confianca": "alta",
+    "fonte": "AVISO AOS ACIONISTAS — Pagamento de Dividendos Intercalares",
+    "justificativa": "Nome da empresa extraído do cabeçalho do documento."
+  },
+  "cnpj": {
+    "valor": "22.333.444/0001-77",
+    "confianca": "alta",
+    "fonte": "CNPJ/ME nº 22.333.444/0001-77",
+    "justificativa": "CNPJ extraído do cabeçalho do documento."
+  },
+  "isin": {
+    "valor": "BRAURSACNOR4",
+    "confianca": "alta",
+    "fonte": "Código de negociação AURS3 (ISIN BRAURSACNOR4)",
+    "justificativa": "ISIN extraído do documento e confirmado via lookup_golden_record."
+  },
+  "ticker": {
+    "valor": "AURS3",
+    "confianca": "alta",
+    "fonte": "Código de negociação AURS3 (ISIN BRAURSACNOR4)",
+    "justificativa": "Ticker extraído do documento e confirmado via lookup_golden_record."
+  },
+  "classe": {
+    "valor": "ON",
+    "confianca": "alta",
+    "fonte": "Valor bruto por ação ON R$ 0,3100000000",
+    "justificativa": "Classe das ações confirmada via lookup_golden_record."
+  },
+  "tipo_evento": {
+    "valor": "DIVIDENDO",
+    "confianca": "alta",
+    "fonte": "AVISO AOS ACIONISTAS — Pagamento de Dividendos Intercalares; Tipo de evento Dividendo intercalar",
+    "justificativa": "Documento é explicitamente um aviso de pagamento de dividendos intercalares, sem menção a JCP, bonificação, grupamento ou desdobramento."
+  },
+  "data_aprovacao": {
+    "valor": "01/06/2026",
+    "confianca": "alta",
+    "fonte": "Data de aprovação (RCA) 01/06/2026",
+    "justificativa": "Data de aprovação extraída do documento."
+  },
+  "data_com": {
+    "valor": "15/07/2026",
+    "confianca": "alta",
+    "fonte": "data-base (\"data com\") 15/07/2026",
+    "justificativa": "Data com extraída do documento."
+  },
+  "data_ex": {
+    "valor": "16/07/2026",
+    "confianca": "alta",
+    "fonte": "Data \"ex-dividendos\" 16/07/2026",
+    "justificativa": "Data ex extraída do documento."
+  },
+  "data_pagamento": {
+    "valor": "10/07/2026",
+    "confianca": "alta",
+    "fonte": "Data de pagamento 10/07/2026",
+    "justificativa": "Data de pagamento extraída do documento."
+  },
+  "valor_bruto_por_acao": {
+    "valor": "0,31",
+    "confianca": "alta",
+    "fonte": "Valor bruto por ação ON R$ 0,3100000000",
+    "justificativa": "Valor bruto por ação extraído do documento."
+  },
+  "valor_liquido_por_acao": {
+    "valor": null,
+    "confianca": "media",
+    "fonte": null,
+    "justificativa": "Não mencionado explicitamente no documento; para dividendos, o valor líquido geralmente equivale ao valor bruto."
+  },
+  "aliquota_irrf": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Dividendos intercalares não têm retenção de IRRF padrão (aplicável apenas se exceder limites legais específicos, não mencionado no documento)."
+  },
+  "proporcao": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não aplicável para evento de tipo DIVIDENDO."
+  },
+  "custo_atribuido_fiscal": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não aplicável para evento de tipo DIVIDENDO."
+  },
+  "moeda": {
+    "valor": "BRL",
+    "confianca": "alta",
+    "fonte": "ON R$ 0,3100000000",
+    "justificativa": "Moeda BRL inferida do símbolo R$."
+  },
+  "validacoes": [
+    {
+      "regra": "lookup_golden_record",
+      "status": "ok",
+      "detalhe": "Dados confirmados: Aurora Saneamento S.A., CNPJ 22.333.444/0001-77, ISIN BRAURSACNOR4, ticker AURS3, classe ON."
+    },
+    {
+      "regra": "check_date_coherence",
+      "status": "falha",
+      "detalhe": "A data_ex (16/07/2026) é posterior à data_pagamento (10/07/2026), o que é inconsistente cronologicamente."
+    },
+    {
+      "regra": "check_value_coherence",
+      "status": "nao_aplicavel",
+      "detalhe": "Não há valor_liquido_por_acao ou aliquota_irrf informados no documento para validação."
+    }
+  ],
+  "confianca_geral": "baixa",
+  "requer_revisao_humana": true,
+  "motivos_revisao": [
+    "Validação reprovada: check_date_coherence - A data_ex (16/07/2026) é posterior à data_pagamento (10/07/2026), o que é inconsistente cronologicamente."
+  ]
+}

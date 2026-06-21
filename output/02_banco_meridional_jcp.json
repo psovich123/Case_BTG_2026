@@ -1,0 +1,120 @@
+{
+  "documento": "02_banco_meridional_jcp.pdf",
+  "metodo_extracao": "texto_nativo",
+  "emissor": {
+    "valor": "Banco Meridional do Brasil S.A.",
+    "confianca": "alta",
+    "fonte": "BANCO MERIDIONAL DO BRASIL S.A.",
+    "justificativa": "Nome completo da empresa conforme documento original"
+  },
+  "cnpj": {
+    "valor": "60.111.222/0001-55",
+    "confianca": "alta",
+    "fonte": "CNPJ/ME nº 60.111.222/0001-55",
+    "justificativa": "CNPJ registrado no documento"
+  },
+  "isin": {
+    "valor": "BRBMRDACNPR7",
+    "confianca": "alta",
+    "fonte": "Código de negociação BMRD4 (ISIN BRBMRDACNPR7)",
+    "justificativa": "ISIN confirmado na golden record"
+  },
+  "ticker": {
+    "valor": "BMRD4",
+    "confianca": "alta",
+    "fonte": "Código de negociação BMRD4",
+    "justificativa": "Ticker confirmado na golden record"
+  },
+  "classe": {
+    "valor": "PN",
+    "confianca": "alta",
+    "fonte": "PN (ações preferencial)",
+    "justificativa": "Classe de ação PN conforme documento"
+  },
+  "tipo_evento": {
+    "valor": "Juros sobre o Capital Próprio",
+    "confianca": "alta",
+    "fonte": "AVISO AOS ACIONISTAS — Juros sobre o Capital Próprio (JCP)",
+    "justificativa": "Documento é explicitamente sobre JCP conforme título e conteúdo"
+  },
+  "data_aprovacao": {
+    "valor": "02/06/2026",
+    "confianca": "alta",
+    "fonte": "reunião realizada em 02 de junho de 2026",
+    "justificativa": "Data da reunião do conselho que aprovou o JCP"
+  },
+  "data_com": {
+    "valor": "16/06/2026",
+    "confianca": "alta",
+    "fonte": "ao final do dia 16 de junho de 2026",
+    "justificativa": "Data base de inscrição para provento"
+  },
+  "data_ex": {
+    "valor": "17/06/2026",
+    "confianca": "alta",
+    "fonte": "17 de junho de 2026",
+    "justificativa": "Data ex-JCP"
+  },
+  "data_pagamento": {
+    "valor": "14/08/2026",
+    "confianca": "alta",
+    "fonte": "Data de pagamento 14/08/2026",
+    "justificativa": "Data do pagamento do JCP"
+  },
+  "valor_bruto_por_acao": {
+    "valor": "0,1738420000",
+    "confianca": "alta",
+    "fonte": "Valor bruto por ação preferencial R$ 0,1738420000",
+    "justificativa": "Valor bruto por ação conforme documento"
+  },
+  "valor_liquido_por_acao": {
+    "valor": "0,1434196500",
+    "confianca": "alta",
+    "fonte": "Valor líquido por ação (PN) R$ 0,1434196500",
+    "justificativa": "Valor líquido por ação conforme documento"
+  },
+  "aliquota_irrf": {
+    "valor": "17,5%",
+    "confianca": "alta",
+    "fonte": "Imposto de Renda Retido na Fonte (IRRF) à alíquota de 17,5%",
+    "justificativa": "Alíquota de IRRF conforme documento"
+  },
+  "proporcao": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não se aplica a JCP - é um pagamento monetário, não uma bonificação"
+  },
+  "custo_atribuido_fiscal": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não se aplica a JCP - não há custo atribuído fiscal"
+  },
+  "moeda": {
+    "valor": "BRL",
+    "confianca": "alta",
+    "fonte": "R$",
+    "justificativa": "Moeda brasileira conforme documento"
+  },
+  "validacoes": [
+    {
+      "regra": "Golden Record Lookup",
+      "status": "ok",
+      "detalhe": "Registro encontrado com sucesso para ISIN BRBMRDACNPR7, Ticker BMRD4, CNPJ 60.111.222/0001-55. Dados confirmados: emissor, CNPJ, ISIN, ticker e classe PN."
+    },
+    {
+      "regra": "Coerência de Datas",
+      "status": "ok",
+      "detalhe": "Datas em ordem cronológica correta: aprovação (02/06/2026) -> data com (16/06/2026) -> data ex (17/06/2026) -> data de pagamento (14/08/2026)."
+    },
+    {
+      "regra": "Coerência de Valores",
+      "status": "ok",
+      "detalhe": "Valor líquido (R$ 0,1434196500) é consistente com valor bruto (R$ 0,1738420000) e alíquota IRRF de 17,5%. Diferença encontrada: 0,0."
+    }
+  ],
+  "confianca_geral": "alta",
+  "requer_revisao_humana": false,
+  "motivos_revisao": []
+}

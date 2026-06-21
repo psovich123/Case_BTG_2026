@@ -1,0 +1,120 @@
+{
+  "documento": "06_petroquimica_litoral_grupamento.pdf",
+  "metodo_extracao": "texto_nativo",
+  "emissor": {
+    "valor": "Petroquímica Litoral S.A.",
+    "confianca": "alta",
+    "fonte": "PETROQUÍMICA LITORAL S.A.",
+    "justificativa": "Extrato do título da empresa no aviso aos acionistas"
+  },
+  "cnpj": {
+    "valor": "55.666.777/0001-08",
+    "confianca": "alta",
+    "fonte": "CNPJ/ME nº 55.666.777/0001-08",
+    "justificativa": "CNPJ fornecido no cabeçalho do documento"
+  },
+  "isin": {
+    "valor": "BRPQLTACNOR8",
+    "confianca": "alta",
+    "fonte": "Código de negociação PQLT3 (ISIN BRPQLTACNOR8)",
+    "justificativa": "ISIN fornecido no documento"
+  },
+  "ticker": {
+    "valor": "PQLT3",
+    "confianca": "alta",
+    "fonte": "Código de negociação PQLT3 (ISIN BRPQLTACNOR8)",
+    "justificativa": "Ticker fornecido no documento"
+  },
+  "classe": {
+    "valor": "ON",
+    "confianca": "alta",
+    "fonte": "golden_records.csv (via lookup_golden_record)",
+    "justificativa": "Classe ON confirmada na base de referência golden_records"
+  },
+  "tipo_evento": {
+    "valor": "GRUPAMENTO",
+    "confianca": "alta",
+    "fonte": "AVISO AOS ACIONISTAS — Grupamento de Ações (Inplit)",
+    "justificativa": "Título do documento indica explicitamente 'Grupamento de Ações'"
+  },
+  "data_aprovacao": {
+    "valor": "30/05/2026",
+    "confianca": "alta",
+    "fonte": "Assembleia Geral Extraordinária realizada em 30 de maio de 2026",
+    "justificativa": "Data da assembleia que aprovou o grupamento"
+  },
+  "data_com": {
+    "valor": "26/06/2026",
+    "confianca": "alta",
+    "fonte": "Data-base do grupamento 26/06/2026",
+    "justificativa": "Data-base do grupamento fornecida no documento"
+  },
+  "data_ex": {
+    "valor": "29/06/2026",
+    "confianca": "alta",
+    "fonte": "A partir de 29 de junho de 2026, as ações passarão a ser negociadas já grupadas",
+    "justificativa": "Data de início da negociação grupada"
+  },
+  "data_pagamento": {
+    "valor": null,
+    "confianca": "media",
+    "fonte": null,
+    "justificativa": "Campo não aplicável para eventos de grupamento - não há pagamento de provento"
+  },
+  "valor_bruto_por_acao": {
+    "valor": null,
+    "confianca": "media",
+    "fonte": null,
+    "justificativa": "Campo não aplicável para eventos de grupamento - não há provento monetário"
+  },
+  "valor_liquido_por_acao": {
+    "valor": null,
+    "confianca": "media",
+    "fonte": null,
+    "justificativa": "Campo não aplicável para eventos de grupamento - não há provento monetário"
+  },
+  "aliquota_irrf": {
+    "valor": null,
+    "confianca": "media",
+    "fonte": null,
+    "justificativa": "Campo não aplicável para eventos de grupamento - não há retenção de IRRF"
+  },
+  "proporcao": {
+    "valor": "10:1",
+    "confianca": "alta",
+    "fonte": "na proporção de 10 (dez) ações existentes para 1 (uma) ação",
+    "justificativa": "Proporção de grupamento 10 para 1 conforme documento"
+  },
+  "custo_atribuido_fiscal": {
+    "valor": null,
+    "confianca": "media",
+    "fonte": null,
+    "justificativa": "Campo não aplicável para eventos de grupamento - custo fiscal é característico de bonificação"
+  },
+  "moeda": {
+    "valor": "BRL",
+    "confianca": "media",
+    "fonte": null,
+    "justificativa": "Moeda implícita (BRL) conforme contexto de documento brasileiro"
+  },
+  "validacoes": [
+    {
+      "regra": "lookup_golden_record - ISIN BRPQLTACNOR8",
+      "status": "ok",
+      "detalhe": "Registro encontrado: Emissor Petroquímica Litoral S.A., CNPJ 55.666.777/0001-08, Ticker PQLT3, Classe ON"
+    },
+    {
+      "regra": "check_date_coherence - ordem cronológica de datas",
+      "status": "ok",
+      "detalhe": "Datas coerentes: 30/05/2026 (aprovacao) < 26/06/2026 (com) < 29/06/2026 (ex)"
+    },
+    {
+      "regra": "check_value_coherence - valor bruto, líquido e alíquota",
+      "status": "nao_aplicavel",
+      "detalhe": "Não aplicável - grupo é de grupamento sem valores monetários"
+    }
+  ],
+  "confianca_geral": "alta",
+  "requer_revisao_humana": false,
+  "motivos_revisao": []
+}

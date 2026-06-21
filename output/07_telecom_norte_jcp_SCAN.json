@@ -1,0 +1,122 @@
+{
+  "documento": "07_telecom_norte_jcp_SCAN.pdf",
+  "metodo_extracao": "ocr",
+  "emissor": {
+    "valor": "Telecom Norte Participações S.A.",
+    "confianca": "alta",
+    "fonte": "TELECOM NORTE PARTICIPAÇÕES S.A.",
+    "justificativa": "Extraído do título do documento, confirmado pela consulta golden_record"
+  },
+  "cnpj": {
+    "valor": "33.222.111/0001-44",
+    "confianca": "alta",
+    "fonte": "CNPJ/ME nº 33.222.111/0001-44",
+    "justificativa": "Extraído do documento, confirmado pela consulta golden_record"
+  },
+  "isin": {
+    "valor": "BRTLNRACNPR2",
+    "confianca": "alta",
+    "fonte": "Código de negociação TLNR4 (ISIN BRTLNRACNPR2)",
+    "justificativa": "Extraído do documento, confirmado pela consulta golden_record"
+  },
+  "ticker": {
+    "valor": "TLNR4",
+    "confianca": "alta",
+    "fonte": "Código de negociação TLNR4 (ISIN BRTLNRACNPR2)",
+    "justificativa": "Extraído do documento, confirmado pela consulta golden_record"
+  },
+  "classe": {
+    "valor": "PN",
+    "confianca": "alta",
+    "fonte": "Valor bruto por ação PN",
+    "justificativa": "Extraído do documento, confirmado pela consulta golden_record"
+  },
+  "tipo_evento": {
+    "valor": "JCP",
+    "confianca": "alta",
+    "fonte": "Juros sobre o Capital Próprio (JCP)",
+    "justificativa": "Documento trata explicitamente de JCP conforme art. 9º da Lei nº 9.249/95, com retenção de IRRF à alíquota de 17,5%"
+  },
+  "data_aprovacao": {
+    "valor": "06/06/2026",
+    "confianca": "alta",
+    "fonte": "Conselho de Administração, em reunião realizada em 06 de junho de 2026",
+    "justificativa": "Data da aprovação do crédito de JCP pelo Conselho de Administração"
+  },
+  "data_com": {
+    "valor": "22/06/2026",
+    "confianca": "alta",
+    "fonte": "ao final do dia 22 de junho de 2026 (data com)",
+    "justificativa": "Data-base para o direito aos proventos"
+  },
+  "data_ex": {
+    "valor": "23/06/2026",
+    "confianca": "alta",
+    "fonte": "negociadas ex-JCP a partir de 23 de junho de 2026",
+    "justificativa": "Data ex-JCP"
+  },
+  "data_pagamento": {
+    "valor": "21/08/2026",
+    "confianca": "alta",
+    "fonte": "Data de pagamento .. 21/08/2026",
+    "justificativa": "Data do pagamento do provento"
+  },
+  "valor_bruto_por_acao": {
+    "valor": "0,1124300000",
+    "confianca": "alta",
+    "fonte": "R$ 0,1124300000",
+    "justificativa": "Valor bruto por ação conforme documento"
+  },
+  "valor_liquido_por_acao": {
+    "valor": "0,0927547500",
+    "confianca": "alta",
+    "fonte": "R$ 0,0927547500",
+    "justificativa": "Valor líquido por ação conforme documento, validado via check_value_coherence"
+  },
+  "aliquota_irrf": {
+    "valor": "17,5",
+    "confianca": "alta",
+    "fonte": "IRRF à alíquota de 17,5%",
+    "justificativa": "Alíquota de IRRF conforme documento, validada via check_value_coherence"
+  },
+  "proporcao": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não se aplica - evento JCP, não é bonificação nem grupamento/desdobramento"
+  },
+  "custo_atribuido_fiscal": {
+    "valor": null,
+    "confianca": "alta",
+    "fonte": null,
+    "justificativa": "Não se aplica - evento JCP, não é bonificação"
+  },
+  "moeda": {
+    "valor": "BRL",
+    "confianca": "alta",
+    "fonte": "R$",
+    "justificativa": "Moeda BRL indicada pelo símbolo R$"
+  },
+  "validacoes": [
+    {
+      "regra": "lookup_golden_record",
+      "status": "ok",
+      "detalhe": "Registro de Telecom Norte Participações S.A. encontrado na base com CNPJ 33.222.111/0001-44, ISIN BRTLNRACNPR2, ticker TLNR4, classe PN"
+    },
+    {
+      "regra": "check_date_coherence",
+      "status": "ok",
+      "detalhe": "Ordem cronológica das datas válida: 06/06/2026 < 22/06/2026 < 23/06/2026 < 21/08/2026"
+    },
+    {
+      "regra": "check_value_coherence",
+      "status": "ok",
+      "detalhe": "Valor líquido consistente com valor bruto e alíquota IRRF: 0,1124300000 * (1-0,175) = 0,0927547500 (diferença: 0,0)"
+    }
+  ],
+  "confianca_geral": "baixa",
+  "requer_revisao_humana": true,
+  "motivos_revisao": [
+    "Texto obtido via OCR - valores monetários e datas exigem confirmação visual do PDF original."
+  ]
+}
